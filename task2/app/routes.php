@@ -11,18 +11,11 @@
 |
 */
 
-Route::get('/', function()
-{
-    return "New string";
-});
-
-Route::get('/hello/{name?}','HelloController@showIndex' 
+Route::get('/','Task2Controller@showArtists' 
 );
 
-Route::get('/form','HelloController@showForm');
+Route::get('/artist/{id?}', 'Task2Controller@showAlbums');
 
-Route::post('/form','HelloController@postForm');
+Route::get('/album/{id?}', 'Task2Controller@showTracks');
 
-
-Route::get('/blade', 'HelloController@showBlade');
-
+Route::get('/track/{id?}', 'Task2Controller@showTrackInfo');
