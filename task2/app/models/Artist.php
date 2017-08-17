@@ -1,5 +1,6 @@
 <?php
 
+
 class Artist extends Eloquent
 {
     protected $table = 'Artist';
@@ -7,6 +8,6 @@ class Artist extends Eloquent
     
     public function albums()
     {
-        return $this->hasMany('Album', 'AlbumId', 'AlbumId');
+        return $this->hasMany('Album', 'ArtistId', 'ArtistId');
     }
 }

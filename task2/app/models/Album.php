@@ -6,8 +6,8 @@ class Album extends Eloquent
     protected $primaryKey = 'AlbumId';
 
     public function tracks()
-  {
+    {
           return $this->hasMany('Track','AlbumId','AlbumId');
-      }
+    }
  }
  

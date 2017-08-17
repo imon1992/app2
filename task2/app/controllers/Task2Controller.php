@@ -5,17 +5,22 @@ class Task2Controller extends BaseController
 
     public function showArtists()
     {
-        return 'artists';
+
+        $artists = Artist::all();
+        return View::make('task2.artists',['artists'=>$artists]);
     }
 
-    public function showAlbums()
+    public function showAlbums($id)
     {
-        return 'albums';
+
+        $albums = Artist::find($id)->albums;
+        return View::make('task2.albums',['albums'=>$albums]);
     }
 
-    public function showTracks()
+    public function showTracks($id)
     {
-        return 'treks';
+        $tracks = Album::find($id)->tracks()->select('Name','Composer')->get();
+        return View::make('task2.tracks',['tracks'=>$tracks]);
     }
     
     public function showTrackInfo()

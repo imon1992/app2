@@ -11,8 +11,7 @@
 |
 */
 
-Route::get('/','Task2Controller@showArtists' 
-);
+Route::get('/','Task2Controller@showArtists');
 
 Route::get('/artist/{id?}', 'Task2Controller@showAlbums');
 

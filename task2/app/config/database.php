@@ -48,7 +48,7 @@ return array(
 
 		'sqlite' => array(
 			'driver'   => 'sqlite',
-			'database' => __DIR__.'/../database/chinook..sqlite',
+			'database' => __DIR__.'/../database/chinook.sqlite',
 			'prefix'   => '',
 		),
 
