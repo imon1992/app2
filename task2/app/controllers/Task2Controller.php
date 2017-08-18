@@ -30,6 +30,6 @@ class Task2Controller extends BaseController
         $genre = Track::find($trackId)->genre->Name;
         $mediaType = Track::find($trackId)->mediaType->Name;
 
-        return View::make('task2.tracks',['trackInfo'=>$trackInfo,'genre'=>$genre,'mediaType'=>$mediaType]);
+        return View::make('task2.trackInfo',['trackInfo'=>$trackInfo,'genre'=>$genre,'mediaType'=>$mediaType]);
     }
 }
