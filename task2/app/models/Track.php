@@ -14,4 +14,9 @@ class Track extends  Eloquent
         return $this->belongsTo('Album', 'AlbumId', 'AlbumId');
     }
 
+    public function mediaType()
+    {
+        return $this->hasOne('MediaType', 'MediaTypeId', 'MediaTypeId');
+    }
+
 }

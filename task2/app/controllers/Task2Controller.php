@@ -26,7 +26,10 @@ class Task2Controller extends BaseController
     
     public function showTrackInfo($trackId)
     {
-  //      $trackInfo = 
-       return 'track infro';
+        $trackInfo = Track::find($trackId);
+        $genre = Track::find($trackId)->genre->Name;
+        $mediaType = Track::find($trackId)->mediaType->Name;
+
+        return View::make('task2.tracks',['trackInfo'=>$trackInfo,'genre'=>$genre,'mediaType'=>$mediaType]);
     }
 }
